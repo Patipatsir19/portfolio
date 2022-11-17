@@ -1,0 +1,58 @@
+@use "../../scss/" as *;
+
+.intro {
+  display: flex;
+  height: 77vh;
+  margin-top: 6rem;
+
+  &_left {
+    flex: 1;
+    flex-direction: column;
+    margin-left: 150px;
+    @include mobile{
+        margin-left: 2px;
+    }
+
+    &_name {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+
+      & > :nth-child(1) {
+        color: $black;
+        font-weight: bold;
+        font-size: 2rem;
+      }
+
+      & > :nth-child(2) {
+        color: $main-color;
+        font-weight: bold;
+        font-size: 3rem;
+      }
+
+      & > :nth-child(3) {
+        font-size: 16px;
+        font-weight: 100;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &_right {
+    margin-right: 150px;
+
+    @include mobile{
+        display: none;
+    }
+  }
+}
+.icon {
+  display: flex;
+  gap: 2rem;
+  opacity: 1;
+
+  & > a >img:hover {
+    opacity: 0.6;
+  }
+}
+
