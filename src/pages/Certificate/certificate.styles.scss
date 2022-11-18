@@ -1,0 +1,33 @@
+@use '../../scss/' as *;
+
+.cer {
+    @include flex(center, center);
+    height: 30vh;
+    margin-top: 3rem;
+    @include mobile{
+        width: $mobile-width;
+    };
+
+    &_list li{
+        list-style-type: circle;
+        color: $black;
+        font-size: 16px;
+        margin-top: 2rem;
+    }
+
+    &_list li:nth-child(1) {
+        list-style-type: none;
+        font-size: 30px;
+        color:$main-color;
+        font-weight: 700;
+        border:dashed 3px $black;
+        margin-top: 4rem;
+        padding: 1rem;
+        box-shadow: $box-shadow;
+    }
+
+    &_list li:nth-last-child(1) {
+        color:$black;
+        font-weight: bold;
+    }
+}
