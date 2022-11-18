@@ -1,0 +1,62 @@
+@use "../../scss/" as *;
+
+.experience {
+  @include flex(center, center);
+  gap: 5rem;
+  height: 30vh;
+  margin-top: 30px;
+
+  &_list {
+    @include flex(flex-end, center);
+  }
+
+  &_list span:nth-child(3) {
+    color: $hover-color;
+  }
+}
+
+.circle {
+  width: 4rem;
+  height: 4rem;
+  background: $white;
+  border-radius: 100%;
+  position: relative;
+  @include flex(center, center);
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  &::before {
+    content: "";
+    border-radius: 100%;
+    background: linear-gradient(to bottom, $main-color 0%, $hover-color 100%);
+    top: -8px;
+    left: -8px;
+    bottom: -8px;
+    right: -8px;
+    position: absolute;
+    z-index: -1;
+    box-shadow: $box-shadow;
+  }
+}
+
+.career {
+  @include flex(center, center);
+  flex-direction: column;
+  margin-top: 1rem;
+
+  &_list div {
+    color: $main-color;
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  &_list_factory {
+    margin: 2rem 0;
+    padding:5px;
+      border: solid 2px $hover-color;
+      border-radius: $border-radius;
+      box-shadow: $box-shadow;
+      z-index: -1;
+      color: $black;
+  }
+}

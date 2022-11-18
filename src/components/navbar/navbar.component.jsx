@@ -58,7 +58,7 @@ const Navbar = () => {
       <div ref={headerRef} className="Nav">
         <div className="Nav_wrap container">
           <div className="Nav-icon">
-            <Link>
+            <Link to="/">
             KeviN'sir<img src={logo} alt="" />
             </Link>
             <div>toggle</div>
