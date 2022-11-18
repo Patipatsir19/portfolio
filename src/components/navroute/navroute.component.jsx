@@ -9,7 +9,7 @@ import Certificate from "../../pages/Certificate/certificate.component";
 
 const NavRoute = () => {
   const element = useRoutes([
-    {path:"/edcation", element: <Education/>},
+    {path:"/education", element: <Education/>},
     {path:"/certificate", element: <Certificate/>},
     {path:"/experience", element: <Experience/>},
     {path:"/story", element: <Story/>},

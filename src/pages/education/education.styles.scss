@@ -1,0 +1,39 @@
+@use '../../scss/' as *;
+
+.educate {
+    @include flex(center,center);
+    margin-top: 100px;
+    border: solid 2px $hover-color;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    @include mobile{
+        width: $mobile-width;
+    }
+
+    &_list ul{
+        margin-top: 2rem;
+        font-size: 20px;
+    }
+
+    &_list li{
+        list-style-type: circle;
+    }
+
+    &_list li:nth-child(1){
+        @include flex(center,center);
+        font-size: 30px;
+        color: $main-color;
+        border: dashed 5px $black;
+        border-radius: $border-radius;
+        box-shadow: $box-shadow;
+        padding:20px;
+        margin: 3px 0;
+        list-style-type: none;
+        margin-bottom: 1rem;
+    }
+
+    &_list li:nth-last-child(1) {
+        font-weight: 700;
+    }
+
+}
